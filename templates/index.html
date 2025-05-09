@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attendance System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        form {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f5f5f5;
+            border-radius: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Attendance System</h1>
+   
+    <form action="/attendance" method="post">
+        <label for="selected_date">Select Date:</label>
+        <input type="date" id="selected_date" name="selected_date" value="{{ selected_date }}" required>
+        <button type="submit">View Attendance</button>
+    </form>
+   
+    {% if selected_date %}
+        <h2>Attendance for {{ selected_date }}</h2>
+       
+        {% if no_data %}
+            <p>No attendance records found for this date.</p>
+        {% elif attendance_data %}
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Time</th>
+                </tr>
+                {% for name, time in attendance_data %}
+                <tr>
+                    <td>{{ name }}</td>
+                    <td>{{ time }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        {% endif %}
+    {% endif %}
+</body>
+</html>
