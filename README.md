@@ -42,3 +42,5 @@ Clone the repository to your local machine. git clone https://github.com/polonex
 * To take the attendance run python attendance_taker.py .
 * Check the Database by python app.py.
 
+### Thanks to Arijit1080 for his repo providing a foundation for this project
+https://github.com/Arijit1080/Face-Recognition-Based-Attendance-System
