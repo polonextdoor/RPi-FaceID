@@ -30,7 +30,7 @@ This project is a face recognition based attendance system built with Python and
 * All other necessary libraries (install via `pip install -r requirements.txt` or manually using pip)
 
 ### Installation
-Clone the repository to your local machine.
+Clone the repository to your local machine. git clone https://github.com/polonextdoor/RPi-FaceID
 * Install the required packages using pip install -r requirements.txt.
 * Download the dlib models from [dlib face recognition resnet model](https://drive.google.com/drive/folders/1M4f7WV2wZuJmlAKkh4IWdOMJJ3K5Cdb3?usp=sharing) and place the data folder inside the repo
 * **Ensure Picamera2 is properly configured on your Raspberry Pi.** Refer to the official Picamera2 documentation for installation and setup instructions: [https://libcamera.org/](https://libcamera.org/)
